@@ -1,0 +1,31 @@
+﻿@model DevopsCalcWebApp.Models.CalculatorModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="form-group">
+        <div class="row col-3" >
+            <label asp-for="Value1"></label>
+            <input type="number" asp-for="Value1"/>
+        </div>
+        <div class="row col-3">
+            <label asp-for="Value2"></label>
+            <input type="number" asp-for="Value2"/>
+        </div>
+        <div class="row  col-3">
+            <label asp-for="Total"></label>
+            <input type="number" asp-for="Total" disabled/>
+        </div>
+        </br>
+        <div class="row col-3">
+            <input type="submit" value="Calculate" asp-action="Index"/>
+        </div>
+    </div>
+
+</form>
